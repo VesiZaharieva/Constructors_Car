@@ -12,7 +12,7 @@ public class Main {
         }
         System.out.println("Owed tax for " + car1.brand + " " + car1.model + " is: " + tax);
 
-        Car car2 = new Car ("VW", "Golf", 2024, 2018, 20000);
+        Car car2 = new Car ("VW", "Golf", 2018, 20000);
         int age2 = car2.calculateAge();
         if (age2 <= 5) {
             tax = 0;
@@ -22,3 +22,4 @@ public class Main {
         System.out.println("Owed tax for " + car2.brand + " " + car2.model + " is: " + tax);
     }
 }
+
