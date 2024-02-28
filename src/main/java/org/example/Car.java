@@ -1,10 +1,13 @@
 package org.example;
 
+import java.util.Calendar;
+
 public class Car {
     public String brand;
     public String model;
+    private Calendar calendar = Calendar.getInstance();
+    private int currentYear = calendar.get(Calendar.YEAR);
     private int productionYear;
-    private int currentYear;
     private double price;
 
     public Car() {
@@ -12,20 +15,21 @@ public class Car {
         this.model = "Clio";
         this.price = 10000;
         this.productionYear = 2021;
-        this.currentYear = 2024;
+
     }
-    public Car(String brand, String model, int currentYear, int productionYear, double price) {
+
+    public Car(String brand, String model, int productionYear, double price) {
         this.brand = brand;
         this.model = model;
-        this.currentYear = currentYear;
         this.productionYear = productionYear;
         this.price = price;
-    }
+        }
+
     public int calculateAge() {
-        return currentYear - productionYear;
-    }
+        return currentYear - productionYear ;        }
+
     public double calculateTax() {
         return price * 0.05;
-        }
     }
+}
 
